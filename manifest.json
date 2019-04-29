@@ -1,0 +1,9 @@
+{
+  "pluginVersion": 1,
+  "name": "SIGBRO",
+  "myVersion": "v.1.0",
+  "shortDescription": "SIGBRO Mobile Helper",
+  "infoUrl": "https://www.nxter.org/sigbro",
+  "startPage": "p_sigbro_main",
+  "nrsVersion": "2.2.3"
+}
