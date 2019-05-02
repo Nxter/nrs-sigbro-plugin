@@ -60,6 +60,15 @@ var NRS = (function (NRS, $, undefined) {
     // raw_transaction_modal_transaction_json_download
 
     findJSON = setInterval(function () {
+      // if send > 0 and we already close modal form - let's clear counter
+      var raw_tx = $('#raw_transaction_modal').css('display');
+      if ( send > 0 && raw_tx == 'none' ) { 
+        NRS.logConsole("Sigbro :: Waiting for the transaction");
+        $('#raw_transaction_modal_transaction_json').html('');
+        $('#raw_transaction_modal_unsigned_bytes_qr_code_container').html('');
+        send = 0; 
+      }
+
       // looking for #raw_transaction_modal_transaction_json 
       var unsignJSON = $('#raw_transaction_modal_transaction_json').val();
       if (unsignJSON.length > 100) {
@@ -73,7 +82,6 @@ var NRS = (function (NRS, $, undefined) {
 
         // in raw_transaction_modal_transaction_json_download we can find url to unsigned json
         var url_to_unsigned_json = $('#raw_transaction_modal_transaction_json_download').attr("href");
-        var unsignedJSON = jQuery.getJSON(url_to_unsigned_json);
 
         $.ajax
           ({
