@@ -75,7 +75,6 @@ var NRS = (function (NRS, $, undefined) {
 
         if (send > 0) {
           // stop looking for json if we already find it
-          clearInterval(findJSON);
           return;
         }
         send++;
@@ -97,7 +96,11 @@ var NRS = (function (NRS, $, undefined) {
                 var save_tx_url = "https://random.nxter.org/api/v3/save_tx";
                 var unsigned_json = {};
 
+                var unsigned_bytes = $('#raw_transaction_modal_unsigned_transaction_bytes').val();
+
                 unsigned_json["transactionJSON"] = response;
+                unsigned_json["unsignedTransactionBytes"] = unsigned_bytes;
+                
                 //console.log("----------debug-----------");
                 //console.log(unsigned_json);
                 //console.log("^^^^^^^^^^^^^ debug ^^^^^^^^^^^^^^^");
