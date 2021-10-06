@@ -1,8 +1,8 @@
 {
-  "pluginVersion": 1,
+  "pluginVersion": 2,
   "name": "SIGBRO",
-  "myVersion": "v.1.1",
-  "shortDescription": "SIGBRO Mobile Helper",
+  "myVersion": "v.2.0",
+  "shortDescription": "SIGBRO QR-code generator",
   "infoUrl": "https://www.nxter.org/sigbro",
   "startPage": "p_sigbro_main",
   "nrsVersion": "2.2.3"

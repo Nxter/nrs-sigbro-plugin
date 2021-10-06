@@ -93,7 +93,7 @@ var NRS = (function (NRS, $, undefined) {
               // check response
               if (response) {
 
-                var save_tx_url = "https://random.nxter.org/api/v3/save_tx";
+                var save_tx_url = "https://random.api.nxter.org/api/v3/save_tx";
                 var unsigned_json = {};
 
                 var unsigned_bytes = $('#raw_transaction_modal_unsigned_transaction_bytes').val();
@@ -123,7 +123,7 @@ var NRS = (function (NRS, $, undefined) {
                         // rewrite div with QR code
                         $('#raw_transaction_modal_unsigned_bytes_qr_code_container').html('<strong>SIGBRO QR CODE</strong><div id="raw_transaction_modal_sigbro_qr_code"></div>');
 
-                        tx_url = "https://random.nxter.org/api/v3/load_tx/" + response.uuid;
+                        tx_url = "https://dl.sigbro.com/" + response.uuid + "/";
                         console.log("----------debug-----------");
                         console.log(tx_url);
                         console.log("^^^^^^^^^^^^^ debug ^^^^^^^^^^^^^^^");
