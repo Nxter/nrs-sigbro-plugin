@@ -123,7 +123,7 @@ var NRS = (function (NRS, $, undefined) {
                         // rewrite div with QR code
                         $('#raw_transaction_modal_unsigned_bytes_qr_code_container').html('<strong>SIGBRO QR CODE</strong><div id="raw_transaction_modal_sigbro_qr_code"></div>');
 
-                        tx_url = "https://dl.sigbro.com/" + response.uuid + "/";
+                        tx_url = "https://dl.sigbro.com/tx/" + response.uuid + "/";
                         console.log("----------debug-----------");
                         console.log(tx_url);
                         console.log("^^^^^^^^^^^^^ debug ^^^^^^^^^^^^^^^");
